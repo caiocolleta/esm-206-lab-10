@@ -1,6 +1,6 @@
 ---
 title: "ESM 206 Lab 10"
-author: "YOUR NAME HERE"
+author: "Caio Vianna"
 date: "December 3, 2018"
 output: html_document
 ---
@@ -40,7 +40,21 @@ Compiled World Bank data, accessed from: https://www.kaggle.com/zanderventer/env
 
 ```{r env_corr}
 
+env_var <- read_csv("world_env_vars.csv") %>% 
+  na.omit
 
+# calculate Pearson's r for correlations
+
+cor_df <- cor(env_var[2:28])
+
+corrplot(cor_df,
+         type = "upper",
+         method = "ellipse",
+         tl.col = "black",
+         tl.cex = 0.5
+         )
+
+# The narrower the ellipse and darker it is, the greater the correlation will be
 
 ```
 
