@@ -257,7 +257,7 @@ aq_plot <- ggplot(aq_tidy, aes(x = as.numeric(year), y = aq_mil, group = country
 
 aq_plot
 
-animate(aq_plot, nframes = 24, renderer = gifski_renderer("aq_animate.gif"))
+animate(aq_plot, nframes = 48, renderer = gifski_renderer("aq_animate.gif"))
 
 
 
